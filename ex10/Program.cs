@@ -6,4 +6,5 @@
 Console.Clear();
 Console.Write("Введите трёхзначное число: ");
 int num = int.Parse(Console.ReadLine());
-Console.WriteLine($"{num} -> {num/10%10}");
+if (num < 100 || num > 1000) Console.WriteLine("Вы ввели не трёхзначное число");
+else Console.WriteLine($"{num} -> {num/10%10}");
