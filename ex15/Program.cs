@@ -7,12 +7,15 @@
 Console.Clear();
 Console.Write("Введите цифру от 1 до 7: ");
 int num = int.Parse(Console.ReadLine());
-
-if (num == 6 || num == 7)
+if (num > 0 && num < 8)
 {
-    Console.WriteLine("да");
+    if (num == 6 || num == 7)
+    {
+        Console.WriteLine("да");
+    }
+    else 
+    {
+        Console.WriteLine("нет");
+    }
 }
-else 
-{
-    Console.WriteLine("нет");
-}
+else Console.WriteLine("Это не день недели");
