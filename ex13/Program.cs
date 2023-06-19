@@ -6,7 +6,17 @@
 Console.Clear();
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
-
-int num3 = num%1000/100;
-if (num3 == 0) Console.WriteLine("третьей цифры нет");
-else Console.WriteLine(num3);
+int th = num;
+if (num > 99)
+{
+    while (th>999)
+    {
+        th = th / 10;
+    }
+    th = th % 10;
+    Console.WriteLine($"{num} -> {th}");
+}
+else
+{
+    Console.WriteLine($"{num} -> третьей цифры нет");
+}
